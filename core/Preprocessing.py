@@ -11,7 +11,7 @@ def check_variances_threshold(data, threshold=0.):
 
 def normalize(data):
     # In case raise divide 0 error
-    check_variances_threshold(data, .1)
+    check_variances_threshold(data)
 
     min_tuple = data.min(axis=0)
     max_tuple = data.max(axis=0)

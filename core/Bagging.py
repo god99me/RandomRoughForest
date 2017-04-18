@@ -40,7 +40,7 @@ class Bag(object):
         self.bag = bag
 
     def get_reduced(self, rough_set):
-        pass
+        return rough_set.get_reduced()
 
     def train(self):
         pass

@@ -6,8 +6,12 @@ class BaseRoughSet(object):
     def __init__(self, attr, desc):
         self.attr = attr
         self.desc = desc
+        self.pos = []
+        self.attr_length = len(self.attr[0])
+        self.desc_dict = self.get_split_desc()
+        self.split_matrix = self.get_split_feat()
 
-    def get_split_feat(self, lammba):
+    def get_split_feat(self, lammba=2):
         attr_data = self.attr
         row_num, col_num = attr_data.shape
         delta = np.std(attr_data, axis=0) / lammba
@@ -39,8 +43,45 @@ class BaseRoughSet(object):
 
         return desc_dict
 
-    def get_post_set(self):
-        pass
+    def get_pos_set(self, col, idx):
+        data = np.array(self.split_matrix)
+
+        if len(col) == 1:
+            n = np.intersect1d(col, data[:, idx])
+        else:
+            n = data[:, idx]
+
+        pos_set = set()
+        for row in n:
+            if self._is_subset(row):
+                # pos_set.add(row)
+                pos_set |= set(row)
+
+        return n, len(pos_set)
+
+    def _is_subset(self, row):
+        row = set(row)
+
+        for value in self.desc_dict.values():
+            if row.issubset(value):
+                return True
+
+        return False
 
     def get_reduced(self):
-        pass
+        result = []
+        self._subsets_helper(0, [], result, [], 0)
+        return result
+
+    def _subsets_helper(self, pos, cols, result, pre_col, pre_count):
+
+        for i in range(pos, self.attr_length):
+            post_col, post_count = self.get_pos_set(pre_col, i)
+            if post_count <= pre_count:
+                result.append(cols[:-1] if len(cols) > 1 else cols)
+                continue
+
+            cols.append(i)
+            self._subsets_helper(i + 1, cols, result, post_col, post_count)
+            cols = cols[:-1]
+
