@@ -40,3 +40,7 @@ class RandomRoughForest(object):
 
         return majority
 
+    def get_reduced(self):
+        for tree in self.forest:
+            tree.get_reduced()
+

@@ -3,7 +3,6 @@ import numpy as np
 
 import core.UCI as UCI
 from core.BaseRoughSet import BaseRoughSet
-from core.Preprocessing import check_variances_threshold
 from core.Preprocessing import normalize
 
 
@@ -39,14 +38,6 @@ class TestBaseRoughSet(TestCase):
         self.assertEqual(count, 7)
 
     def test_get_reduced(self):
-        # feat = np.array([[0.0909, 1.,     1],
-        #                  [0,      0.3750, 1],
-        #                  [0.4091, 0,      1],
-        #                  [0.6364, 0.75,   1],
-        #                  [1.,     0.3750, 2],
-        #                  [0.9091, 0.5,    2],
-        #                  [0.9545, 0.6250, 2],
-        #                  [0.6818, 0.6250, 1]])
         feat = np.array([[5.1, 3.5, 1],
                          [4.9, 3.0, 1],
                          [5.8, 2.7, 1],

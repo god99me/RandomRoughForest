@@ -1,4 +1,5 @@
 import numpy as np
+from functools import reduce
 
 
 class BaseRoughSet(object):
@@ -10,6 +11,7 @@ class BaseRoughSet(object):
         self.attr_length = len(self.attr[0])
         self.desc_dict = self.get_split_desc()
         self.split_matrix = self.get_split_feat()
+        self.max_dependency = 0
 
     def get_split_feat(self, lammba=2):
         attr_data = self.attr
@@ -43,21 +45,23 @@ class BaseRoughSet(object):
 
         return desc_dict
 
-    def get_pos_set(self, col, idx):
+    def get_pos_set(self, cols):
         data = np.array(self.split_matrix)
 
-        if len(col) == 1:
-            n = np.intersect1d(col, data[:, idx])
+        if len(cols) == 1:
+            n = data[:, cols[0]]
         else:
-            n = data[:, idx]
+            n = []
+            for row_idx in range(len(data)):
+                n.append(reduce(set.intersection, map(set, data[row_idx, cols])))
+            # n = reduce(set.intersection, map(set, data[:, cols]))
 
         pos_set = set()
         for row in n:
             if self._is_subset(row):
                 # pos_set.add(row)
                 pos_set |= set(row)
-
-        return n, len(pos_set)
+        return np.array(n), len(pos_set)
 
     def _is_subset(self, row):
         row = set(row)
@@ -69,19 +73,27 @@ class BaseRoughSet(object):
         return False
 
     def get_reduced(self):
-        result = []
-        self._subsets_helper(0, [], result, [], 0)
+        result = {}
+        subset = []
+        nums = self.attr_length
+        stack = []
+        self._subsets_helper(0, nums, subset, result)
         return result
 
-    def _subsets_helper(self, pos, cols, result, pre_col, pre_count):
+    def _subsets_helper(self, pos, nums, subset, result):
 
-        for i in range(pos, self.attr_length):
-            post_col, post_count = self.get_pos_set(pre_col, i)
-            if post_count <= pre_count:
-                result.append(cols[:-1] if len(cols) > 1 else cols)
-                continue
+        for i in range(pos, nums):
 
-            cols.append(i)
-            self._subsets_helper(i + 1, cols, result, post_col, post_count)
-            cols = cols[:-1]
+            subset.append(i)
+
+            inter_sect_row, dependency = self.get_pos_set(subset)
+            if dependency >= self.max_dependency:
+                self.max_dependency = dependency
+                if dependency not in result:
+                    result[dependency] = []
+                result[dependency].append(subset.copy())
+
+            self._subsets_helper(i + 1, nums, subset, result)
+            subset.pop()
+
 

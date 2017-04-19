@@ -2,6 +2,8 @@ import random
 import math
 import numpy as np
 
+from core.BaseRoughSet import BaseRoughSet
+
 
 class Bagging(object):
 
@@ -39,8 +41,11 @@ class Bag(object):
     def __init__(self, bag):
         self.bag = bag
 
-    def get_reduced(self, rough_set):
-        return rough_set.get_reduced()
+    def get_reduced(self):
+        bag = self.bag
+        rough_set = BaseRoughSet(bag[:, :-1], bag[:, -1])
+        print(rough_set.get_reduced())
+        # return rough_set.get_reduced()
 
     def train(self):
         pass
