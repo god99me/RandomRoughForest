@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd871b21-3bc8-4407-a202-e9303a79e8f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_random_rough_forest.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_rough_set.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Bagging.py" afterPath="$PROJECT_DIR$/core/Bagging.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/BaseRoughSet.py" afterPath="$PROJECT_DIR$/core/BaseRoughSet.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/RandomRoughForest.py" afterPath="$PROJECT_DIR$/core/RandomRoughForest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_base_rough_set.py" afterPath="$PROJECT_DIR$/test/test_base_rough_set.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/UCI.py" afterPath="$PROJECT_DIR$/core/UCI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_random_rough_forest.py" afterPath="$PROJECT_DIR$/test/test_random_rough_forest.py" />
     </list>
     <ignored path="RandomRoughForest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,11 +21,11 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_bagging.coverage" NAME="py.test in TestBagging and test_bagging Coverage Results" MODIFIED="1492507194862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_reduced.coverage" NAME="py.test in TestBaseRoughSet and test_get_reduced Coverage Results" MODIFIED="1492585896839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_reduced.coverage" NAME="py.test in TestBaseRoughSet and test_get_reduced Coverage Results" MODIFIED="1492590047219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_bagging_py.coverage" NAME="py.test in test_bagging.py Coverage Results" MODIFIED="1492071320639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$Preprocesser.coverage" NAME="Preprocesser Coverage Results" MODIFIED="1492067699052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestPreprocessing.coverage" NAME="py.test in TestPreprocessing Coverage Results" MODIFIED="1492068422991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$BaseRoughSet.coverage" NAME="BaseRoughSet Coverage Results" MODIFIED="1492584858290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$BaseRoughSet.coverage" NAME="BaseRoughSet Coverage Results" MODIFIED="1492590056460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$RandomRoughForest.coverage" NAME="RandomRoughForest Coverage Results" MODIFIED="1492586824660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging.coverage" NAME="py.test in TestBagging Coverage Results" MODIFIED="1492070628639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_pos_set.coverage" NAME="py.test in TestBaseRoughSet and test_get_pos_set Coverage Results" MODIFIED="1492507201040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -35,7 +33,7 @@
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_UCI_py.coverage" NAME="py.test in test_UCI.py Coverage Results" MODIFIED="1492068576544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_base_rough_set_py.coverage" NAME="py.test in test_base_rough_set.py Coverage Results" MODIFIED="1492507220840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_preprocessing_py.coverage" NAME="py.test in test_preprocessing.py Coverage Results" MODIFIED="1492068342188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestRandomRoughForest_and_test_get_reduce.coverage" NAME="py.test in TestRandomRoughForest and test_get_reduce Coverage Results" MODIFIED="1492589147629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestRandomRoughForest_and_test_get_reduce.coverage" NAME="py.test in TestRandomRoughForest and test_get_reduce Coverage Results" MODIFIED="1492590061458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -59,8 +57,8 @@
       <file leaf-file-name="RandomRoughForest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+            <state relative-caret-position="1260">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -69,8 +67,8 @@
       <file leaf-file-name="test_random_rough_forest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_random_rough_forest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="192">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -78,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bagging.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bagging.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/Bagging.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="43" column="19" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="19" />
+            <state relative-caret-position="432">
+              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="12" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -93,7 +91,7 @@
       <file leaf-file-name="test_bagging.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="48">
               <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -105,8 +103,8 @@
       <file leaf-file-name="BaseRoughSet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/BaseRoughSet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            <state relative-caret-position="288">
+              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#410#1078#0" expanded="false" />
@@ -121,8 +119,8 @@
       <file leaf-file-name="test_base_rough_set.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_base_rough_set.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+            <state relative-caret-position="408">
+              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -130,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UCI.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UCI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/UCI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -162,14 +160,14 @@
         <option value="$PROJECT_DIR$/test/test_preprocessing.py" />
         <option value="$PROJECT_DIR$/test/test_bagging.py" />
         <option value="$PROJECT_DIR$/test/test_rough_set.py" />
-        <option value="$PROJECT_DIR$/core/UCI.py" />
         <option value="$PROJECT_DIR$/core/Preprocessing.py" />
         <option value="$PROJECT_DIR$/test/test_base_rough_set.py" />
+        <option value="$PROJECT_DIR$/test/test_random_rough_foret.py" />
         <option value="$PROJECT_DIR$/core/BaseRoughSet.py" />
         <option value="$PROJECT_DIR$/core/Bagging.py" />
-        <option value="$PROJECT_DIR$/test/test_random_rough_foret.py" />
         <option value="$PROJECT_DIR$/test/test_random_rough_forest.py" />
         <option value="$PROJECT_DIR$/core/RandomRoughForest.py" />
+        <option value="$PROJECT_DIR$/core/UCI.py" />
       </list>
     </option>
   </component>
@@ -599,9 +597,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in TestRandomRoughForest and test_get_reduce" />
-        <item index="1" class="java.lang.String" itemvalue="Python.RandomRoughForest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.BaseRoughSet" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in TestBaseRoughSet and test_get_reduced" />
-        <item index="3" class="java.lang.String" itemvalue="Python.BaseRoughSet" />
+        <item index="3" class="java.lang.String" itemvalue="Python.RandomRoughForest" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_base_rough_set.py" />
       </list>
     </recent_temporary>
@@ -623,34 +621,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_TestBaseRoughSet_and_test_get_reduced - 2017.04.19 at 15h 02m 28s.xml">
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_get_reduced - 2017.04.19 at 16h 16m 07s.xml">
       <configuration name="py.test in TestBaseRoughSet and test_get_reduced" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBaseRoughSet_and_test_get_reduced - 2017.04.19 at 15h 09m 31s.xml">
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_get_reduced - 2017.04.19 at 16h 18m 59s.xml">
       <configuration name="py.test in TestBaseRoughSet and test_get_reduced" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBaseRoughSet_and_test_get_reduced - 2017.04.19 at 15h 11m 38s.xml">
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_get_reduced - 2017.04.19 at 16h 20m 24s.xml">
       <configuration name="py.test in TestBaseRoughSet and test_get_reduced" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 15h 42m 08s.xml">
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_get_reduced - 2017.04.19 at 16h 20m 48s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_get_reduced" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 15m 23s.xml">
       <configuration name="py.test in TestRandomRoughForest and test_get_reduce" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 15h 46m 17s.xml">
+    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 16m 24s.xml">
       <configuration name="py.test in TestRandomRoughForest and test_get_reduce" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 15h 47m 16s.xml">
+    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 19m 06s.xml">
       <configuration name="py.test in TestRandomRoughForest and test_get_reduce" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 15h 58m 20s.xml">
+    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 19m 54s.xml">
       <configuration name="py.test in TestRandomRoughForest and test_get_reduce" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 15h 58m 21s.xml">
+    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 20m 16s.xml">
       <configuration name="py.test in TestRandomRoughForest and test_get_reduce" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 05m 19s.xml">
-      <configuration name="py.test in TestRandomRoughForest and test_get_reduce" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 05m 50s.xml">
+    <history-entry file="py_test_in_TestRandomRoughForest_and_test_get_reduce - 2017.04.19 at 16h 21m 03s.xml">
       <configuration name="py.test in TestRandomRoughForest and test_get_reduce" configurationId="tests" />
     </history-entry>
   </component>
@@ -665,16 +663,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13166311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2596054" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2596054" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35929388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33437175" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -871,14 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/Preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -887,10 +877,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_base_rough_set.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/BaseRoughSet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        <state relative-caret-position="288">
+          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#410#1078#0" expanded="false" />
@@ -901,52 +911,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_base_rough_set.py">
+    <entry file="file://$PROJECT_DIR$/core/Bagging.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+        <state relative-caret-position="432">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="12" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/UCI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_random_rough_forest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="192">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Bagging.py">
+    <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="19" />
+        <state relative-caret-position="1260">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/UCI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

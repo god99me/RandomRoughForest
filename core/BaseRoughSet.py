@@ -89,9 +89,8 @@ class BaseRoughSet(object):
             inter_sect_row, dependency = self.get_pos_set(subset)
             if dependency >= self.max_dependency:
                 self.max_dependency = dependency
-                if dependency not in result:
-                    result[dependency] = []
-                result[dependency].append(subset.copy())
+                k = tuple(subset)
+                result[k] = dependency
 
             self._subsets_helper(i + 1, nums, subset, result)
             subset.pop()

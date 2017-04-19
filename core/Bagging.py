@@ -44,8 +44,7 @@ class Bag(object):
     def get_reduced(self):
         bag = self.bag
         rough_set = BaseRoughSet(bag[:, :-1], bag[:, -1])
-        print(rough_set.get_reduced())
-        # return rough_set.get_reduced()
+        return rough_set.get_reduced()
 
     def train(self):
         pass

@@ -41,6 +41,13 @@ class RandomRoughForest(object):
         return majority
 
     def get_reduced(self):
+        result = {}
         for tree in self.forest:
-            tree.get_reduced()
+            dependency_dict = tree.get_reduced()
+            for k in dependency_dict.keys():
+                if k not in result:
+                    result[k] = dependency_dict[k]
+                else:
+                    result[k] += dependency_dict[k]
+        return result
 

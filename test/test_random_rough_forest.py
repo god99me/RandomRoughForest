@@ -13,5 +13,6 @@ class TestRandomRoughForest(unittest.TestCase):
         normalized = normalize(iris.data)
         hstack = np.concatenate((normalized, iris.target.reshape(150, 1)), axis=1)
         rrf = RandomRoughForest(hstack)
-        rrf.get_reduced()
+        result = rrf.get_reduced()
+        print(result)
 
