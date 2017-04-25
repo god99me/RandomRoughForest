@@ -54,12 +54,10 @@ class BaseRoughSet(object):
             n = []
             for row_idx in range(len(data)):
                 n.append(reduce(set.intersection, map(set, data[row_idx, cols])))
-            # n = reduce(set.intersection, map(set, data[:, cols]))
 
         pos_set = set()
         for row in n:
             if self._is_subset(row):
-                # pos_set.add(row)
                 pos_set |= set(row)
         return np.array(n), len(pos_set)
 
@@ -76,7 +74,6 @@ class BaseRoughSet(object):
         result = {}
         subset = []
         nums = self.attr_length
-        stack = []
         self._subsets_helper(0, nums, subset, result)
         return result
 
