@@ -8,14 +8,11 @@ class RandomRoughForest(object):
     forest with different classifier,the classifier result
     can be conduct from majority voting.
     """
-    def __init__(self, train_data, num_of_trees=100):
-        # self.data = train_data
-        self.num_of_trees = num_of_trees
-        self.bagging = Bagging(train_data)
+    def __init__(self, train_data, strategy):
+        # self.bagging = Bagging(train_data, strategy)
         self.forest = []
-
-        for i in range(num_of_trees):
-            self.forest.append(self.bagging.get_bag())
+        self.bagging = Bagging(train_data, strategy)
+        self.forest.extend(self.bagging.get_bags())
 
     def train(self):
         for tree in self.forest:

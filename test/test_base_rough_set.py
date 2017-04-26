@@ -12,6 +12,24 @@ class TestBaseRoughSet(TestCase):
         iris = UCI.create_iris_data_sets()
         self.rough_set = BaseRoughSet(iris.data, iris.target)
 
+        # dummy test case
+        self.feat = np.array([[5.1, 3.5, 1],
+                              [4.9, 3.0, 1],
+                              [5.8, 2.7, 1],
+                              [6.3, 3.3, 1],
+                              [7.1, 3.0, 2],
+                              [6.9, 3.1, 2],
+                              [7.0, 3.2, 2],
+                              [6.4, 3.2, 1]])
+        self.desc = np.array(['Setosa',
+                              'Setosa',
+                              'Virginica',
+                              'Virginica',
+                              'Virginica',
+                              'Versicolor',
+                              'Versicolor',
+                              'Versicolor'])
+
     def test_get_split_feat(self):
         rough_set = self.rough_set
         feat_matrix = rough_set.get_split_feat(2)
@@ -22,38 +40,9 @@ class TestBaseRoughSet(TestCase):
         self.assertIsNotNone(desc_dict)
         self.assertIsInstance(desc_dict, dict)
 
-    def test_get_pos_set(self):
-        attr = np.array([[[0, 1]],
-                         [[1]],
-                         [[2]],
-                         [[3]],
-                         [[4]],
-                         [[5]],
-                         [[6]],
-                         [[7]]])
-        desc = np.arange(8)
-        rough_set = BaseRoughSet(attr, desc)
-        col, count = rough_set.get_pos_set([], 0)
-        # self.assertEqual(col, attr)
-        self.assertEqual(count, 7)
-
     def test_get_reduced(self):
-        feat = np.array([[5.1, 3.5, 1],
-                         [4.9, 3.0, 1],
-                         [5.8, 2.7, 1],
-                         [6.3, 3.3, 1],
-                         [7.1, 3.0, 2],
-                         [6.9, 3.1, 2],
-                         [7.0, 3.2, 2],
-                         [6.4, 3.2, 1]])
-        desc = np.array(['Setosa',
-                         'Setosa',
-                         'Virginica',
-                         'Virginica',
-                         'Virginica',
-                         'Versicolor',
-                         'Versicolor',
-                         'Versicolor'])
+        feat = self.feat
+        desc = self.desc
 
         # pre process
         nor_feat = normalize(feat)
@@ -62,3 +51,37 @@ class TestBaseRoughSet(TestCase):
         rough_set = BaseRoughSet(nor_feat, desc)
         reduced = rough_set.get_reduced()
         print(reduced)
+
+    def test_get_core(self):
+        feat = self.feat
+        desc = self.desc
+
+        nor_feat = normalize(feat)
+
+        rough_set = BaseRoughSet(nor_feat, desc)
+
+        core = rough_set.get_core()
+        self.assertEqual(core, [1])
+
+    def test_remove_unrelated_attribute_and_core(self):
+        feat = self.feat
+        desc = self.desc
+
+        nor_feat = normalize(feat)
+
+        rough_set = BaseRoughSet(nor_feat, desc)
+
+        remains = rough_set.remove_unrelated_attribute_and_core()
+        self.assertEqual(remains, [0, 2])
+
+    def test_get_reduced_from_core(self):
+        feat = self.feat
+        desc = self.desc
+
+        nor_feat = normalize(feat)
+
+        rough_set = BaseRoughSet(nor_feat, desc)
+
+        remains = rough_set.get_reduced_from_core()
+        self.assertEqual(remains, {(1, 2): 5, (1, 0): 5})
+
