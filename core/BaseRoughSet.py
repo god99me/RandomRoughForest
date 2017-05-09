@@ -89,9 +89,11 @@ class BaseRoughSet(object):
     def get_core(self):
         return self.core.copy()
 
-    def remove_unrelated_attribute_and_core(self):
+    def remove_unrelated_attribute_and_core(self, skip_remove_unrelated=False):
         core = self.get_core()  # deep copy
         remains = list(set(list(range(self.attr_length))) ^ set(core))
+        if skip_remove_unrelated:
+            return remains
         base_dependency = self.get_pos_set(core)[1]
 
         for remain in remains:
@@ -113,7 +115,7 @@ class BaseRoughSet(object):
     def get_reduced_from_core(self):
         reduct = self.core.copy()
         result = {}
-        remains = self.remove_unrelated_attribute_and_core()
+        remains = self.remove_unrelated_attribute_and_core(True)
         base_dependency = self.get_pos_set(reduct)[1]
         pre_remains_length = -1
 
@@ -129,8 +131,8 @@ class BaseRoughSet(object):
                     remains.remove(remain)
                 else:
                     reduct.pop()
-            if dependency > base_dependency:  # If there is a case where reduct happens to equal to core
-                result[tuple(reduct)] = dependency
+            # if dependency > base_dependency:  # If there is a case where reduct happens to equal to core
+            result[tuple(reduct)] = dependency
         return result
 
     def _subsets_helper(self, pos, nums, subset, result):

@@ -19,9 +19,10 @@ class Bagging(object):
         else:
             raise NotImplementedError(subspace_strategy + "has not implemented yet.")
 
+        # row_idx, col_idx = self.subspace_strategy((self.row, self.col))
         self.reduced_dict = BaseRoughSet(train_data[:, :-1], train_data[:, -1]).get_reduced_from_core()
 
-        for k, v in self.reduced_dict:
+        for k in self.reduced_dict.keys():
             row_idx, col_idx = self.subspace_strategy((self.row, self.col))
             if col_idx is None:
                 col_idx = list(k).copy()

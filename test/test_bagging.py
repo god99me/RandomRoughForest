@@ -5,7 +5,7 @@ import numpy as np
 from core.Bagging import Bagging
 from core.Preprocessing import check_variances_threshold
 from core.Preprocessing import normalize
-
+from sklearn.datasets import load_breast_cancer
 
 class TestBagging(unittest.TestCase):
 
@@ -16,7 +16,14 @@ class TestBagging(unittest.TestCase):
     def test_bagging(self):
         bagging = Bagging(self.data, "ReducedSubspace")
         bags = bagging.get_bags()
-        print(bags)
+        print(len(bags))
+
+    def test_bagging_breast_cancer(self):
+        cancer0 = load_breast_cancer()
+        cancer = np.concatenate((normalize(cancer0.data), cancer0.target.reshape(569, 1)), axis=1)
+        bagging = Bagging(cancer, "ReducedSubspace")
+        bags = bagging.get_bags()
+        print(len(bags))
 
 
 

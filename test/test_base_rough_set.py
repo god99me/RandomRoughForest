@@ -50,7 +50,7 @@ class TestBaseRoughSet(TestCase):
 
         rough_set = BaseRoughSet(nor_feat, desc)
         reduced = rough_set.get_reduced()
-        print(reduced)
+        self.assertEqual(reduced, {(0, 1): 5, (0, 1, 2): 5, (0,): 3, (1, 2): 5})
 
     def test_get_core(self):
         feat = self.feat
