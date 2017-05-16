@@ -1,3 +1,4 @@
+import random
 import numpy as np
 import pandas as pd
 
@@ -69,7 +70,7 @@ class BaseRoughSet(object):
         dependencies = []
         all_pos_set = BaseRoughSet.calc_pos_set(data)
         all_dependency = BaseRoughSet.calc_attr_dependency(len(all_pos_set), rows)
-        dependencies.append(all_dependency)
+        # dependencies.append(all_dependency)
 
         for i in range(cols - 1):
             df_temp = data.drop(i, axis=1)
@@ -79,14 +80,15 @@ class BaseRoughSet(object):
             dependency = BaseRoughSet.calc_attr_dependency(len(temp_pos_set), rows)
             dependencies.append(dependency)
 
-        return dependencies
+        return all_dependency - np.array(dependencies)
 
     @staticmethod
     def calc_pos_set(data):
         rows, cols = data.shape
-        if cols < 2:
-            raise Exception("columns number should larger than 1")
         pos_set = set()
+        if cols < 2:
+            # raise Exception("columns number should larger than 1")
+            return pos_set
 
         for i in range(rows):
             temp = set()
@@ -113,8 +115,26 @@ class BaseRoughSet(object):
         return attrs
 
     @staticmethod
-    def calc_red():
-        pass
+    def calc_red(data, core, core_pos_set, threshold=0, shuffle=True):
+        n_rows, n_cols = data.shape
+        remained = list(set(range(n_cols - 1)).difference(core))
+        red = list(core)
+
+        # core_dependency = BaseRoughSet.calc_attr_dependency(len(core_pos_set), n_rows)
+        base = len(core_pos_set)
+
+        if shuffle:
+            random.shuffle(remained)
+
+        for i in remained:
+            red.append(i)
+            pos_set = BaseRoughSet.calc_pos_set(data.iloc[:, red])
+            if len(pos_set) - base < threshold:
+                red.remove(i)
+                continue
+            base = len(pos_set)
+
+        return set(red)
 
     @staticmethod
     def calc_attr_dependency(pos_set_size, all_size):

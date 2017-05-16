@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 
 def check_variances_threshold(data, threshold=0.):
