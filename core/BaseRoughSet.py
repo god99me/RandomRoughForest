@@ -1,153 +1,125 @@
 import numpy as np
-from functools import reduce
+import pandas as pd
 
 
 class BaseRoughSet(object):
 
-    def __init__(self, attr, desc):
-        self.attr = attr
-        self.desc = desc
-        self.pos = []
-        self.attr_length = len(self.attr[0])
-        self.desc_dict = self.get_split_desc()
-        self.split_matrix = self.get_split_feat()
-        self.max_dependency = 0
-        self.core = self.set_core()
+    @staticmethod
+    def partition(column, is_numeric, radius=0):
+        n_rows = len(column)
 
-    def get_split_feat(self, lam=2):
-        attr_data = self.attr
-        row_num, col_num = attr_data.shape
-        delta = np.std(attr_data, axis=0) / lam
+        cluster = [[] for i in range(n_rows)]
 
-        matrix_3d = []
-        for i in range(row_num):
-            matrix_3d.append([])
-            for j in range(col_num):
-                matrix_3d[i].append([])
-
-        for j in range(col_num):
-            for i in range(row_num):
-                for k in range(i, row_num):
-                    dist = abs(attr_data[k][j] - attr_data[i][j])
-                    if dist < delta[j]:
-                        matrix_3d[i][j].append(k)
-                        if i != k:
-                            matrix_3d[k][j].append(i)
-
-        return matrix_3d
-
-    def get_split_desc(self):
-        desc_dict = {}
-
-        for k, v in enumerate(self.desc):
-            if v not in desc_dict.keys():
-                desc_dict[v] = []
-            desc_dict[v].append(k)
-
-        return desc_dict
-
-    def get_pos_set(self, cols):
-        data = np.array(self.split_matrix)
-
-        if len(cols) == 1:
-            n = data[:, cols[0]]
+        if not is_numeric:
+            std_col = np.std(column)
+            radius = std_col / radius
         else:
-            n = []
-            for row_idx in range(len(data)):
-                # deep copy
-                n.append(reduce(set.intersection, map(set, data[row_idx, cols])))
+            radius = 0
 
+        for i in range(n_rows):
+            base = column[i]
+
+            for j in range(i, n_rows):
+                if abs(column[j] - base) > radius:
+                    continue
+                if i != j:
+                    cluster[i].append(j)
+                cluster[j].append(i)
+
+            cluster[i] = tuple(cluster[i])
+
+        return pd.Series(cluster)
+
+    @staticmethod
+    def partition_all(columns, types, radius=0):
+        columns = pd.DataFrame(columns)
+        n_rows, n_cols = columns.shape
+        result = BaseRoughSet.partition(columns.iloc[:, 0], types[0], radius)
+
+        for i in range(1, n_cols):
+            transfer = BaseRoughSet.partition(columns.iloc[:, i], types[i], radius)
+            result = pd.concat([result, transfer], axis=1)
+
+        # recover columns index, dummy fix
+        result.columns = range(n_cols)
+        return result
+
+    @staticmethod
+    def calc_core(data):
+        rows, cols = data.shape
+        core = set()
+        base_pos_set = BaseRoughSet.calc_pos_set(data)
+        base = len(base_pos_set)
+
+        for i in range(cols - 1):
+            df_temp = data.drop(i, axis=1)
+            # in case index label wrong
+            assert data.shape[1] - df_temp.shape[1] == 1
+            temp_pos_set = BaseRoughSet.calc_pos_set(df_temp)
+            temp_len = len(temp_pos_set)
+
+            if temp_len < base:
+                core.add(i)
+
+        return core
+
+    @staticmethod
+    def calc_feat_attr_dependency_without_one_feat(data):
+        rows, cols = data.shape
+        dependencies = []
+        all_pos_set = BaseRoughSet.calc_pos_set(data)
+        all_dependency = BaseRoughSet.calc_attr_dependency(len(all_pos_set), rows)
+        dependencies.append(all_dependency)
+
+        for i in range(cols - 1):
+            df_temp = data.drop(i, axis=1)
+            # in case index label wrong
+            assert data.shape[1] - df_temp.shape[1] == 1
+            temp_pos_set = BaseRoughSet.calc_pos_set(df_temp)
+            dependency = BaseRoughSet.calc_attr_dependency(len(temp_pos_set), rows)
+            dependencies.append(dependency)
+
+        return dependencies
+
+    @staticmethod
+    def calc_pos_set(data):
+        rows, cols = data.shape
+        if cols < 2:
+            raise Exception("columns number should larger than 1")
         pos_set = set()
-        for row in n:
-            if self._is_subset(row):
-                pos_set |= set(row)
-        return np.array(n), len(pos_set)
 
-    def _is_subset(self, row):
-        row = set(row)
+        for i in range(rows):
+            temp = set()
+            for j in range(cols - 1):
+                if len(temp) == 0:
+                    temp = set(data.iloc[i, j])
+                temp &= set(data.iloc[i, j])
+            if temp.issubset(data.iloc[i, cols - 1]):
+                pos_set |= temp
 
-        for value in self.desc_dict.values():
-            if row.issubset(value):
-                return True
+        return pos_set
 
-        return False
+    @staticmethod
+    def calc_each_feature_attr_dependency(data):
+        n_rows, n_cols = data.shape
 
-    def set_core(self):
-        num = self.attr_length
-        core = []
+        attrs = []
+        for i in range(n_cols - 1):
+            temp_df = pd.concat([data.iloc[:, i], data.iloc[:, n_cols - 1]], axis=1)
+            pos_set = BaseRoughSet.calc_pos_set(temp_df)
+            attr_dependency = BaseRoughSet.calc_attr_dependency(len(pos_set), n_rows)
+            attrs.append(attr_dependency)
 
-        # all condition attributes
-        total_pos_set, total_dependency = self.get_pos_set(np.array(list(range(num))))
+        return attrs
 
-        for idx in range(num):
-            cols = np.delete(np.array(list(range(num))), idx)
-            pos_set, dependency = self.get_pos_set(cols)
-            if dependency != total_dependency:
-                core.append(idx)
-        return np.array(core)
+    @staticmethod
+    def calc_red():
+        pass
 
-    def get_core(self):
-        return self.core.copy()
+    @staticmethod
+    def calc_attr_dependency(pos_set_size, all_size):
+        return pos_set_size / all_size
 
-    def remove_unrelated_attribute_and_core(self, skip_remove_unrelated=False):
-        core = self.get_core()  # deep copy
-        remains = list(set(list(range(self.attr_length))) ^ set(core))
-        if skip_remove_unrelated:
-            return remains
-        base_dependency = self.get_pos_set(core)[1]
-
-        for remain in remains:
-            cols = list(core.copy())
-            cols.append(remain)
-            if self.get_pos_set(cols) == base_dependency:
-                remains.remove(remain)
-
-        return remains
-
-    def get_reduced(self):
-
-        result = {}
-        subset = []
-        nums = self.attr_length
-        self._subsets_helper(0, nums, subset, result)
-        return result
-
-    def get_reduced_from_core(self):
-        reduct = self.core.copy()
-        result = {}
-        remains = self.remove_unrelated_attribute_and_core(True)
-        base_dependency = self.get_pos_set(reduct)[1]
-        pre_remains_length = -1
-
-        while pre_remains_length != len(remains):
-            reduct = list(self.core.copy())
-            dependency = base_dependency
-            pre_remains_length = len(remains)
-            for remain in remains:
-                reduct.append(remain)
-                new_dependency = self.get_pos_set(reduct)[1]
-                if new_dependency > dependency:
-                    dependency = new_dependency
-                    remains.remove(remain)
-                else:
-                    reduct.pop()
-            # if dependency > base_dependency:  # If there is a case where reduct happens to equal to core
-            result[tuple(reduct)] = dependency
-        return result
-
-    def _subsets_helper(self, pos, nums, subset, result):
-
-        for i in range(pos, nums):
-
-            subset.append(i)
-
-            inter_sect_row, dependency = self.get_pos_set(subset)
-            if dependency >= self.max_dependency:
-                self.max_dependency = dependency
-                k = tuple(subset)
-                result[k] = dependency
-
-            self._subsets_helper(i + 1, nums, subset, result)
-            subset.pop()
-
-
+    @staticmethod
+    def calc_sig():
+        pass

@@ -3,9 +3,9 @@ import unittest
 import core.UCI as UCI
 import numpy as np
 from core.Bagging import Bagging
-from core.Preprocessing import check_variances_threshold
 from core.Preprocessing import normalize
 from sklearn.datasets import load_breast_cancer
+
 
 class TestBagging(unittest.TestCase):
 
