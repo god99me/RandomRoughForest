@@ -1,53 +1,66 @@
+import random
+
+from sklearn import tree
 from core.BaseRoughSet import BaseRoughSet
-from core.strategy.RandomSubspace import RandomSubspace
-from core.strategy.ReducedSubspace import ReducedSubspace
 
 
 class Bagging(object):
 
-    def __init__(self, train_data, subspace_strategy):
-        self.data = train_data
-        self.row = train_data.shape[0]
-        self.col = train_data.shape[1] - 1
-        self.bags = []
+    def __init__(self, data, types, radius_range, oob_list):
+        self.samples = Bagging.fetch_samples(data.shape[0])
 
-        # todo: reflection implement version
-        if subspace_strategy == "RandomSubspace":
-            self.subspace_strategy = RandomSubspace.get_subspace
-        elif subspace_strategy == "ReducedSubspace":
-            self.subspace_strategy = ReducedSubspace.get_subspace
-        else:
-            raise NotImplementedError(subspace_strategy + "has not implemented yet.")
+        self.oob_list = oob_list
+        self.update_oob_list(self.oob_list, self.samples)
 
-        # row_idx, col_idx = self.subspace_strategy((self.row, self.col))
-        self.reduced_dict = BaseRoughSet(train_data[:, :-1], train_data[:, -1]).get_reduced_from_core()
+        self.features = Bagging.fetch_features(data, types, radius_range)
+        self.data = data
+        # self.data = Bagging.fetch_data(data, self.samples, self.features)
 
-        for k in self.reduced_dict.keys():
-            row_idx, col_idx = self.subspace_strategy((self.row, self.col))
-            if col_idx is None:
-                col_idx = list(k).copy()
-            col_idx.append(self.col)
-            self.bags.append(Bag(train_data, row_idx, col_idx))
-
-    def get_bags(self):
-        return self.bags
-
-    def train(self):
-        pass
+        self.clf = tree.DecisionTreeClassifier()
 
     def classify(self):
-        pass
+        test_data = Bagging.fetch_data(self.data, self.oob_list, self.features)
+        y = Bagging.fetch_decision(self.data, self.oob_list)
+        result = self.clf.predict(test_data)
+        return result, y
 
+    def train(self):
+        train_data = Bagging.fetch_data(self.data, self.samples, self.features)
+        y = Bagging.fetch_decision(self.data, self.samples)
 
-class Bag(object):
+        self.clf = self.clf.fit(train_data, y)
 
-    def __init__(self, data, row_idx, col_idx):
-        self.row_idx = row_idx
-        self.col_idx = col_idx
-        self.data = data[row_idx, :][:, col_idx]
+    @staticmethod
+    def fetch_features(data, types, radius_range):
+        radius = random.choice(radius_range)
+        result = BaseRoughSet.partition_all(data, types, radius)
+        core = BaseRoughSet.calc_core(result)
+        core_pos_set = BaseRoughSet.calc_pos_set(result.iloc[:, list(core)])
 
+        # red_set = set()
+        # for i in range(5):
+        red = BaseRoughSet.calc_red(result, core, core_pos_set, 0.15)
+            # red_set.add(tuple(red))
 
+        return list(red)
 
+    @staticmethod
+    def fetch_samples(n_rows):
+        """Get random rows with replacement"""
+        selected_rows = set()
+        for i in range(n_rows):
+            selected_rows.add(random.randint(0, n_rows - 1))
+        samples = list(selected_rows)
+        return samples
 
+    @staticmethod
+    def fetch_data(data, samples, features):
+        return data.iloc[samples, features]
 
+    @staticmethod
+    def fetch_decision(data, samples):
+        n_cols = data.shape[1]
+        return data.iloc[samples, n_cols - 1]
 
+    def update_oob_list(self, oob_list, samples):
+        self.oob_list = list(set(oob_list).difference(set(samples)))

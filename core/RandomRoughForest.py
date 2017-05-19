@@ -2,27 +2,25 @@ from .Bagging import Bagging
 
 
 class RandomRoughForest(object):
-    """
-    For each of the trees in the forest, using rough set
-    to get the reduct of universe(data) subspace, train the
-    forest with different classifier,the classifier result
-    can be conduct from majority voting.
-    """
-    def __init__(self, train_data, strategy):
+
+    def __init__(self, data, types, radius_range, n_trees):
         # self.bagging = Bagging(train_data, strategy)
         self.forest = []
-        self.bagging = Bagging(train_data, strategy)
-        self.forest.extend(self.bagging.get_bags())
+        self.data = data
+        self.oob = list(range(data.shape[0]))  # pass ref
+
+        for i in range(n_trees):
+            self.forest.append(Bagging(data, types, radius_range, self.oob))
 
     def train(self):
         for tree in self.forest:
             tree.train()
 
-    def classify(self, test_set):
+    def classify(self):
         votes = {}
 
         for tree in self.forest:
-            label = tree.classify(test_set)
+            label = tree.classify(self.data.iloc[self.oob])
             if label in votes:
                 votes[label] += 1
             else:
@@ -36,15 +34,3 @@ class RandomRoughForest(object):
                 max_cnt = votes[key]
 
         return majority
-
-    def get_reduced(self):
-        result = {}
-        for tree in self.forest:
-            dependency_dict = tree.get_reduced()
-            for k in dependency_dict.keys():
-                if k not in result:
-                    result[k] = dependency_dict[k]
-                else:
-                    result[k] += dependency_dict[k]
-        return result
-
