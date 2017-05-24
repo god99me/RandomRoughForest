@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd871b21-3bc8-4407-a202-e9303a79e8f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/demo/BeyondCompare.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/strategy/RandomSubspace.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/strategy/ReducedSubspace.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/strategy/SubspaceStrategy.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Bagging.py" afterPath="$PROJECT_DIR$/core/Bagging.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/BaseRoughSet.py" afterPath="$PROJECT_DIR$/core/BaseRoughSet.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Preprocessing.py" afterPath="$PROJECT_DIR$/core/Preprocessing.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/RandomRoughForest.py" afterPath="$PROJECT_DIR$/core/RandomRoughForest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/datasets/wine/wine.data" afterPath="$PROJECT_DIR$/core/datasets/wine/wine.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/demo/BeyondCompare.py" afterPath="$PROJECT_DIR$/core/demo/BeyondCompare.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_bagging.py" afterPath="$PROJECT_DIR$/test/test_bagging.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_base_rough_set.py" afterPath="$PROJECT_DIR$/test/test_base_rough_set.py" />
     </list>
     <ignored path="RandomRoughForest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,52 +28,54 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_bagging.coverage" NAME="py.test in TestBagging and test_bagging Coverage Results" MODIFIED="1494321105744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$BeyondCompare.coverage" NAME="BeyondCompare Coverage Results" MODIFIED="1495003510659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$BeyondCompare.coverage" NAME="BeyondCompare Coverage Results" MODIFIED="1495505754811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/demo" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_each_feature_attr_dependency.coverage" NAME="py.test in TestBaseRoughSet and test_calc_each_feature_attr_dependency Coverage Results" MODIFIED="1495606907210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging.coverage" NAME="py.test in TestBagging Coverage Results" MODIFIED="1495422500064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_split_feat.coverage" NAME="py.test in TestBaseRoughSet and test_get_split_feat Coverage Results" MODIFIED="1493194834029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestSubspaceStrategy.coverage" NAME="py.test in TestSubspaceStrategy Coverage Results" MODIFIED="1493176709344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_fetch_decision.coverage" NAME="py.test in TestBagging and test_fetch_decision Coverage Results" MODIFIED="1495073078767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_remove_unrelated_attribute.coverage" NAME="py.test in TestBaseRoughSet and test_remove_unrelated_attribute Coverage Results" MODIFIED="1493171979848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_bagging_breast_cancer.coverage" NAME="py.test in TestBagging and test_bagging_breast_cancer Coverage Results" MODIFIED="1493291199227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$main.coverage" NAME="main Coverage Results" MODIFIED="1495507394957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/demo" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_random_rough_forest_py.coverage" NAME="py.test in test_random_rough_forest.py Coverage Results" MODIFIED="1493191198122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_core.coverage" NAME="py.test in TestBaseRoughSet and test_get_core Coverage Results" MODIFIED="1494321137579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_feat_attr_dependency_without_one_feat.coverage" NAME="py.test in TestBaseRoughSet and test_calc_feat_attr_dependency_without_one_feat Coverage Results" MODIFIED="1495422127241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1495617622911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_random_subspace_strategy_py.coverage" NAME="py.test in test_random_subspace_strategy.py Coverage Results" MODIFIED="1493189233384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_strategy.coverage" NAME="py.test in strategy Coverage Results" MODIFIED="1493195406142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_reduced_from_core.coverage" NAME="py.test in TestBaseRoughSet and test_get_reduced_from_core Coverage Results" MODIFIED="1494321062692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_each_feature_attr_dependency.coverage" NAME="py.test in TestBaseRoughSet and test_calc_each_feature_attr_dependency Coverage Results" MODIFIED="1494924599866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestSubspaceStrategy_and_test_get_subspace.coverage" NAME="py.test in TestSubspaceStrategy and test_get_subspace Coverage Results" MODIFIED="1493102284298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_reduced.coverage" NAME="py.test in TestBaseRoughSet and test_get_reduced Coverage Results" MODIFIED="1493198018751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_fetch_samples.coverage" NAME="py.test in TestBagging and test_fetch_samples Coverage Results" MODIFIED="1495072877392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_bagging_py.coverage" NAME="py.test in test_bagging.py Coverage Results" MODIFIED="1493290488933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet.coverage" NAME="py.test in TestBaseRoughSet Coverage Results" MODIFIED="1494927303881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet.coverage" NAME="py.test in TestBaseRoughSet Coverage Results" MODIFIED="1495422878097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestPreprocessing.coverage" NAME="py.test in TestPreprocessing Coverage Results" MODIFIED="1492068422991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$Bagging.coverage" NAME="Bagging Coverage Results" MODIFIED="1495072384910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$RandomRoughForest.coverage" NAME="RandomRoughForest Coverage Results" MODIFIED="1492586824660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_fetch_data.coverage" NAME="py.test in TestBagging and test_fetch_data Coverage Results" MODIFIED="1495073017040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging.coverage" NAME="py.test in TestBagging Coverage Results" MODIFIED="1493202034161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_subspace_strategy_py.coverage" NAME="py.test in test_subspace_strategy.py Coverage Results" MODIFIED="1493189230754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_split_feat.coverage" NAME="py.test in TestBaseRoughSet and test_get_split_feat Coverage Results" MODIFIED="1493194834029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestSubspaceStrategy.coverage" NAME="py.test in TestSubspaceStrategy Coverage Results" MODIFIED="1493176709344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$UCI.coverage" NAME="UCI Coverage Results" MODIFIED="1492066616258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_partition_all.coverage" NAME="py.test in TestBaseRoughSet and test_partition_all Coverage Results" MODIFIED="1494897954523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_red.coverage" NAME="py.test in TestBaseRoughSet and test_calc_red Coverage Results" MODIFIED="1494927178693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_fetch_decision.coverage" NAME="py.test in TestBagging and test_fetch_decision Coverage Results" MODIFIED="1495073078767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_remove_unrelated_attribute.coverage" NAME="py.test in TestBaseRoughSet and test_remove_unrelated_attribute Coverage Results" MODIFIED="1493171979848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_bagging_breast_cancer.coverage" NAME="py.test in TestBagging and test_bagging_breast_cancer Coverage Results" MODIFIED="1493291199227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_red.coverage" NAME="py.test in TestBaseRoughSet and test_calc_red Coverage Results" MODIFIED="1495436234312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_UCI_py.coverage" NAME="py.test in test_UCI.py Coverage Results" MODIFIED="1493191200983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_preprocessing_py.coverage" NAME="py.test in test_preprocessing.py Coverage Results" MODIFIED="1493195419159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_random_rough_forest_py.coverage" NAME="py.test in test_random_rough_forest.py Coverage Results" MODIFIED="1493191198122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_remove_unrelated_attribute_and_core.coverage" NAME="py.test in TestBaseRoughSet and test_remove_unrelated_attribute_and_core Coverage Results" MODIFIED="1494321086928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestRandomSubspaceStrategy_and_test_get_space.coverage" NAME="py.test in TestRandomSubspaceStrategy and test_get_space Coverage Results" MODIFIED="1493189484027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_core.coverage" NAME="py.test in TestBaseRoughSet and test_get_core Coverage Results" MODIFIED="1494321137579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$Preprocesser.coverage" NAME="Preprocesser Coverage Results" MODIFIED="1492067699052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$BaseRoughSet.coverage" NAME="BaseRoughSet Coverage Results" MODIFIED="1493197323190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_update_oob_list.coverage" NAME="py.test in TestBagging and test_update_oob_list Coverage Results" MODIFIED="1495074718643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test.coverage" NAME="py.test in test Coverage Results" MODIFIED="1493191210913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_feat_attr_dependency_without_one_feat.coverage" NAME="py.test in TestBaseRoughSet and test_calc_feat_attr_dependency_without_one_feat Coverage Results" MODIFIED="1494920685453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_partition.coverage" NAME="py.test in TestBaseRoughSet and test_partition Coverage Results" MODIFIED="1494897949267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_core.coverage" NAME="py.test in TestBaseRoughSet and test_calc_core Coverage Results" MODIFIED="1495072524553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_partition.coverage" NAME="py.test in TestBaseRoughSet and test_partition Coverage Results" MODIFIED="1495438265196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_core.coverage" NAME="py.test in TestBaseRoughSet and test_calc_core Coverage Results" MODIFIED="1495606373557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestSubspaceStrategy_and_test_get_sqrt_n_rand_cols.coverage" NAME="py.test in TestSubspaceStrategy and test_get_sqrt_n_rand_cols Coverage Results" MODIFIED="1493103161225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestRandomSubspaceStrategy.coverage" NAME="py.test in TestRandomSubspaceStrategy Coverage Results" MODIFIED="1493103448632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_pos_set.coverage" NAME="py.test in TestBaseRoughSet and test_get_pos_set Coverage Results" MODIFIED="1493104995281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestSubspaceStrategy_and_test_get_rand_rows_with_replacement.coverage" NAME="py.test in TestSubspaceStrategy and test_get_rand_rows_with_replacement Coverage Results" MODIFIED="1493103107755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_pos_set.coverage" NAME="py.test in TestBaseRoughSet and test_calc_pos_set Coverage Results" MODIFIED="1494926718646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_random_subspace_strategy_py.coverage" NAME="py.test in test_random_subspace_strategy.py Coverage Results" MODIFIED="1493189233384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_calc_pos_set.coverage" NAME="py.test in TestBaseRoughSet and test_calc_pos_set Coverage Results" MODIFIED="1495606349192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBaseRoughSet_and_test_get_split_desc.coverage" NAME="py.test in TestBaseRoughSet and test_get_split_desc Coverage Results" MODIFIED="1493194899781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_test_base_rough_set_py.coverage" NAME="py.test in test_base_rough_set.py Coverage Results" MODIFIED="1494838421951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestRandomRoughForest_and_test_get_reduce.coverage" NAME="py.test in TestRandomRoughForest and test_get_reduce Coverage Results" MODIFIED="1493198169817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_fetch_features.coverage" NAME="py.test in TestBagging and test_fetch_features Coverage Results" MODIFIED="1495072700265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RandomRoughForest$py_test_in_TestBagging_and_test_fetch_features.coverage" NAME="py.test in TestBagging and test_fetch_features Coverage Results" MODIFIED="1495422651694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -76,88 +85,113 @@
     <favorites_list name="RandomRoughForest" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_base_rough_set.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_base_rough_set.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#498#1021#0" expanded="false" />
-                <element signature="e#1223#1537#0" expanded="false" />
-                <element signature="e#1937#2555#0" expanded="false" />
-                <element signature="e#2628#3253#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bagging.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/Bagging.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_bagging.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseRoughSet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/BaseRoughSet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-              <folding>
-                <element signature="e#159#732#0" expanded="false" />
-                <element signature="e#809#1241#0" expanded="false" />
-                <element signature="e#1294#1786#0" expanded="false" />
-                <element signature="e#1872#2525#0" expanded="false" />
-                <element signature="e#2581#3077#0" expanded="false" />
-                <element signature="e#3154#3529#0" expanded="false" />
-                <element signature="e#4289#4319#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomRoughForest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BeyondCompare.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/demo/BeyondCompare.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.53673345">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Preprocessing.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/Preprocessing.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="454">
+                  <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Bagging.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/Bagging.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="199">
+                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#13#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RandomRoughForest.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="479">
+                  <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_base_rough_set.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/test_base_rough_set.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="239">
+                  <caret line="113" column="46" selection-start-line="87" selection-start-column="8" selection-end-line="113" selection-end-column="46" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BeyondCompare.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/demo/BeyondCompare.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="599">
+                  <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tree.py" pinned="false" current-in-tab="true">
+            <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/tree/tree.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="199">
+                  <caret line="403" column="0" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/core/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BaseRoughSet.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/BaseRoughSet.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-600">
+                  <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+                  <folding>
+                    <element signature="e#92#652#0" expanded="false" />
+                    <element signature="e#697#1051#0" expanded="false" />
+                    <element signature="e#2230#2674#0" expanded="false" />
+                    <element signature="e#2726#3047#0" expanded="false" />
+                    <element signature="e#3121#3631#0" expanded="false" />
+                    <element signature="e#3789#4266#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -190,13 +224,17 @@
         <option value="$PROJECT_DIR$/core/NeighborhoodRoughSet.py" />
         <option value="$PROJECT_DIR$/core/ClassicalRoughSet.py" />
         <option value="$PROJECT_DIR$/core/Decorator.py" />
+        <option value="$PROJECT_DIR$/core/BeyondCompare.py" />
+        <option value="$PROJECT_DIR$/test/test_bagging.py" />
+        <option value="$PROJECT_DIR$/core/demo/BeyondCompare.py" />
+        <option value="$PROJECT_DIR$/core/datasets/wine/wine.data" />
+        <option value="$PROJECT_DIR$/core/demo/main.py" />
+        <option value="$PROJECT_DIR$/core/Bagging.py" />
+        <option value="$PROJECT_DIR$/test/test_base_rough_set.py" />
         <option value="$PROJECT_DIR$/core/Preprocessing.py" />
         <option value="$PROJECT_DIR$/core/BaseRoughSet.py" />
-        <option value="$PROJECT_DIR$/test/test_base_rough_set.py" />
-        <option value="$PROJECT_DIR$/core/BeyondCompare.py" />
-        <option value="$PROJECT_DIR$/core/Bagging.py" />
+        <option value="$PROJECT_DIR$/core/main.py" />
         <option value="$PROJECT_DIR$/core/RandomRoughForest.py" />
-        <option value="$PROJECT_DIR$/test/test_bagging.py" />
       </list>
     </option>
   </component>
@@ -236,7 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -266,39 +303,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RandomRoughForest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RandomRoughForest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RandomRoughForest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RandomRoughForest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strategy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -320,8 +325,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RandomRoughForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RandomRoughForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datasets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RandomRoughForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RandomRoughForest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datasets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,8 +383,44 @@
       <recent name="E:\GitHub\RandomRoughForest\core\strategy" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in TestBagging and test_update_oob_list">
-    <configuration default="false" name="py.test in TestBagging and test_fetch_features" type="tests" factoryName="py.test" temporary="true">
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core/demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RandomRoughForest" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/demo/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RandomRoughForest" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="py.test in TestBaseRoughSet and test_calc_pos_set" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -356,14 +438,14 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/test/test_bagging.py" />
-      <option name="keywords" value="TestBagging and test_fetch_features" />
+      <option name="testToRun" value="$PROJECT_DIR$/test/test_base_rough_set.py" />
+      <option name="keywords" value="TestBaseRoughSet and test_calc_pos_set" />
       <option name="params" value="" />
       <option name="USE_PARAM" value="false" />
       <option name="USE_KEYWORD" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="py.test in TestBagging and test_fetch_samples" type="tests" factoryName="py.test" temporary="true">
+    <configuration default="false" name="py.test in TestBaseRoughSet and test_calc_core" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -381,14 +463,14 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/test/test_bagging.py" />
-      <option name="keywords" value="TestBagging and test_fetch_samples" />
+      <option name="testToRun" value="$PROJECT_DIR$/test/test_base_rough_set.py" />
+      <option name="keywords" value="TestBaseRoughSet and test_calc_core" />
       <option name="params" value="" />
       <option name="USE_PARAM" value="false" />
       <option name="USE_KEYWORD" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="py.test in TestBagging and test_fetch_data" type="tests" factoryName="py.test" temporary="true">
+    <configuration default="false" name="py.test in TestBaseRoughSet and test_calc_each_feature_attr_dependency" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -406,58 +488,8 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/test/test_bagging.py" />
-      <option name="keywords" value="TestBagging and test_fetch_data" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="true" />
-      <method />
-    </configuration>
-    <configuration default="false" name="py.test in TestBagging and test_fetch_decision" type="tests" factoryName="py.test" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RandomRoughForest" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/test/test_bagging.py" />
-      <option name="keywords" value="TestBagging and test_fetch_decision" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="true" />
-      <method />
-    </configuration>
-    <configuration default="false" name="py.test in TestBagging and test_update_oob_list" type="tests" factoryName="py.test" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RandomRoughForest" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="$PROJECT_DIR$/test/test_bagging.py" />
-      <option name="keywords" value="TestBagging and test_update_oob_list" />
+      <option name="testToRun" value="$PROJECT_DIR$/test/test_base_rough_set.py" />
+      <option name="keywords" value="TestBaseRoughSet and test_calc_each_feature_attr_dependency" />
       <option name="params" value="" />
       <option name="USE_PARAM" value="false" />
       <option name="USE_KEYWORD" value="true" />
@@ -672,19 +704,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_features" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_samples" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_data" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_decision" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_update_oob_list" />
+      <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in TestBaseRoughSet and test_calc_pos_set" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in TestBaseRoughSet and test_calc_core" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in TestBaseRoughSet and test_calc_each_feature_attr_dependency" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_update_oob_list" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_decision" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_data" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_samples" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in TestBagging and test_fetch_features" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in TestBaseRoughSet and test_calc_each_feature_attr_dependency" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in TestBaseRoughSet and test_calc_core" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in TestBaseRoughSet and test_calc_pos_set" />
+        <item index="4" class="java.lang.String" itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -705,35 +737,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 25m 11s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_calc_core - 2017.05.24 at 14h 13m 24s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_calc_core" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 25m 32s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_calc_each_feature_attr_dependency - 2017.05.24 at 14h 21m 43s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_calc_each_feature_attr_dependency" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 26m 08s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_calc_pos_set - 2017.05.24 at 11h 06m 28s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_calc_pos_set" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 31m 38s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_calc_pos_set - 2017.05.24 at 11h 07m 05s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_calc_pos_set" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 31m 42s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_calc_pos_set - 2017.05.24 at 14h 12m 50s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_calc_pos_set" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 31m 46s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_partition - 2017.05.22 at 15h 29m 14s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_partition" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 31m 50s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_partition - 2017.05.22 at 15h 29m 40s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_partition" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 31m 54s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_partition - 2017.05.22 at 15h 30m 43s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_partition" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 31m 57s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_partition - 2017.05.22 at 15h 30m 56s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_partition" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_TestBagging_and_test_update_oob_list - 2017.05.18 at 10h 32m 01s.xml">
-      <configuration name="py.test in TestBagging and test_update_oob_list" configurationId="tests" />
+    <history-entry file="py_test_in_TestBaseRoughSet_and_test_partition - 2017.05.22 at 15h 31m 07s.xml">
+      <configuration name="py.test in TestBaseRoughSet and test_partition" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -746,27 +778,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="4" width="1924" height="1084" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="4" width="1924" height="1084" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1475322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.116416305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271028" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30494216" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23238696" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3396425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20084122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3659306" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3491062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -811,7 +843,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="205" />
+      <option name="time" value="235" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -819,159 +851,15 @@
         <watch expression="result.shape" />
         <watch expression="temp" />
       </configuration>
+      <configuration name="PythonConfigurationType">
+        <watch expression="iris.values" />
+        <watch expression="wine.values" />
+        <watch expression="sonar.values" />
+        <watch expression="bank.values" />
+      </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/ClassicalRoughSet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-            <element signature="e#128#401#0" expanded="false" />
-            <element signature="e#448#1113#0" expanded="false" />
-            <element signature="e#630#727#0" expanded="false" />
-            <element signature="e#1153#1347#0" expanded="false" />
-            <element signature="e#1390#1834#0" expanded="false" />
-            <element signature="e#1875#2022#0" expanded="false" />
-            <element signature="e#2056#2480#0" expanded="false" />
-            <element signature="e#2514#2537#0" expanded="false" />
-            <element signature="e#2627#3068#0" expanded="false" />
-            <element signature="e#3106#3245#0" expanded="false" />
-            <element signature="e#3292#4174#0" expanded="false" />
-            <element signature="e#4243#4626#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_random_rough_forest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="82" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_classical_rough_set.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/strategy/test_subspace_strategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Bagging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_random_rough_forest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Bagging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/ClassicalRoughSet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-            <element signature="e#128#401#0" expanded="false" />
-            <element signature="e#448#1113#0" expanded="false" />
-            <element signature="e#630#727#0" expanded="false" />
-            <element signature="e#1153#1347#0" expanded="false" />
-            <element signature="e#1390#1834#0" expanded="false" />
-            <element signature="e#1875#2022#0" expanded="false" />
-            <element signature="e#2056#2480#0" expanded="false" />
-            <element signature="e#2514#2537#0" expanded="false" />
-            <element signature="e#2627#3068#0" expanded="false" />
-            <element signature="e#3106#3245#0" expanded="false" />
-            <element signature="e#3292#4174#0" expanded="false" />
-            <element signature="e#4243#4626#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_classical_rough_set.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/UCI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Bagging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_UCI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -990,21 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-            <element signature="e#128#401#0" expanded="false" />
-            <element signature="e#448#1113#0" expanded="false" />
-            <element signature="e#630#727#0" expanded="false" />
-            <element signature="e#1153#1347#0" expanded="false" />
-            <element signature="e#1390#1834#0" expanded="false" />
-            <element signature="e#1875#2022#0" expanded="false" />
-            <element signature="e#2056#2480#0" expanded="false" />
-            <element signature="e#2514#2537#0" expanded="false" />
-            <element signature="e#2627#3068#0" expanded="false" />
-            <element signature="e#3106#3245#0" expanded="false" />
-            <element signature="e#3292#4174#0" expanded="false" />
-            <element signature="e#4243#4626#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,13 +969,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/strategy/ReducedSubspace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/strategy/ReducedSubspace.py" />
     <entry file="file://$PROJECT_DIR$/test/test_classical_rough_set.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1890">
@@ -1145,90 +1012,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/ClassicalRoughSet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-            <element signature="e#128#401#0" expanded="false" />
-            <element signature="e#448#1113#0" expanded="false" />
-            <element signature="e#630#727#0" expanded="false" />
-            <element signature="e#1153#1347#0" expanded="false" />
-            <element signature="e#1390#1834#0" expanded="false" />
-            <element signature="e#1875#2022#0" expanded="false" />
-            <element signature="e#2056#2480#0" expanded="false" />
-            <element signature="e#2514#2537#0" expanded="false" />
-            <element signature="e#2627#3068#0" expanded="false" />
-            <element signature="e#3106#3245#0" expanded="false" />
-            <element signature="e#3292#4174#0" expanded="false" />
-            <element signature="e#4243#4626#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/strategy/SubspaceStrategy.py">
+    <entry file="file://$PROJECT_DIR$/core/strategy/SubspaceStrategy.py" />
+    <entry file="file://$PROJECT_DIR$/core/strategy/RandomSubspace.py" />
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/cross_validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/strategy/RandomSubspace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/demo/BeyondCompare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/BaseRoughSet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-          <folding>
-            <element signature="e#159#732#0" expanded="false" />
-            <element signature="e#809#1241#0" expanded="false" />
-            <element signature="e#1294#1786#0" expanded="false" />
-            <element signature="e#1872#2525#0" expanded="false" />
-            <element signature="e#2581#3077#0" expanded="false" />
-            <element signature="e#3154#3529#0" expanded="false" />
-            <element signature="e#4289#4319#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="401">
+          <caret line="1432" column="42" selection-start-line="1432" selection-start-column="42" selection-end-line="1432" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_bagging.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/datasets/iris/iris.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/datasets/iris/bezdekIris.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/datasets/wine/wine.names">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/pandas/io/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="568" column="0" selection-start-line="568" selection-start-column="0" selection-end-line="568" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/datasets/bank/bank-additional-full.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/tree/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/metrics/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2940">
+          <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="111" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/ensemble/forest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="891" column="25" selection-start-line="891" selection-start-column="25" selection-end-line="891" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/datasets/sonar.all-data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="357" selection-start-line="3" selection-start-column="356" selection-end-line="3" selection-end-column="357" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/datasets/bank/bank-full.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9630">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/demo/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/datasets/wine/wine.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/BaseRoughSet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600">
+          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+          <folding>
+            <element signature="e#92#652#0" expanded="false" />
+            <element signature="e#697#1051#0" expanded="false" />
+            <element signature="e#2230#2674#0" expanded="false" />
+            <element signature="e#2726#3047#0" expanded="false" />
+            <element signature="e#3121#3631#0" expanded="false" />
+            <element signature="e#3789#4266#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_base_rough_set.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="113" column="46" selection-start-line="87" selection-start-column="8" selection-end-line="113" selection-end-column="46" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -1237,25 +1188,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/Bagging.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="199">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_base_rough_set.py">
+    <entry file="file://$PROJECT_DIR$/core/RandomRoughForest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
+        <state relative-caret-position="479">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#498#1021#0" expanded="false" />
-            <element signature="e#1223#1537#0" expanded="false" />
-            <element signature="e#1937#2555#0" expanded="false" />
-            <element signature="e#2628#3253#0" expanded="false" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/demo/BeyondCompare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://I:/Scripts/Python35/Lib/site-packages/sklearn/tree/tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="403" column="0" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

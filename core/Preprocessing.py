@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 
 def check_variances_threshold(data, threshold=0.):
@@ -19,8 +20,8 @@ def normalize_all(data):
 
 
 def normalize(data):
-    data = np.array(data)
-    return (data - data.min()) / (data.max() - data.min())
+    df = pd.DataFrame(data)
+    return (df - df.min()) / (df.max() - df.min())
 
 
 

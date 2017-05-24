@@ -1,46 +1,45 @@
 import random
 
 from sklearn import tree
-from core.BaseRoughSet import BaseRoughSet
+
+import core.BaseRoughSet as RS
 
 
 class Bagging(object):
 
-    def __init__(self, data, types, radius_range, oob_list):
+    def __init__(self, data, radius_range, oob_list):
         self.samples = Bagging.fetch_samples(data.shape[0])
 
         self.oob_list = oob_list
         self.update_oob_list(self.oob_list, self.samples)
 
-        self.features = Bagging.fetch_features(data, types, radius_range)
+        self.features = Bagging.fetch_features(data, radius_range)
         self.data = data
         # self.data = Bagging.fetch_data(data, self.samples, self.features)
 
         self.clf = tree.DecisionTreeClassifier()
 
-    def classify(self):
-        test_data = Bagging.fetch_data(self.data, self.oob_list, self.features)
-        y = Bagging.fetch_decision(self.data, self.oob_list)
-        result = self.clf.predict(test_data)
-        return result, y
+    def classify(self, test_set):
+        prediction = self.clf.predict(test_set)
+        return prediction
 
     def train(self):
-        train_data = Bagging.fetch_data(self.data, self.samples, self.features)
-        y = Bagging.fetch_decision(self.data, self.samples)
+        X_train = Bagging.fetch_data(self.data, self.samples, self.features)
+        Y_train = Bagging.fetch_decision(self.data, self.samples)
 
-        self.clf = self.clf.fit(train_data, y)
+        self.clf.fit(X_train, Y_train)
 
     @staticmethod
-    def fetch_features(data, types, radius_range):
+    def fetch_features(data, radius_range):
         radius = random.choice(radius_range)
-        result = BaseRoughSet.partition_all(data, types, radius)
-        core = BaseRoughSet.calc_core(result)
-        core_pos_set = BaseRoughSet.calc_pos_set(result.iloc[:, list(core)])
+        result = RS.partition_all(data, radius)
+        core = RS.calc_core(result)
+        core_pos_set = RS.calc_pos_set(result.iloc[:, list(core)])
 
         # red_set = set()
         # for i in range(5):
-        red = BaseRoughSet.calc_red(result, core, core_pos_set, 0.15)
-            # red_set.add(tuple(red))
+        red = RS.calc_red(result, core, core_pos_set, 0.15)
+        # red_set.add(tuple(red))
 
         return list(red)
 
