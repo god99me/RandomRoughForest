@@ -16,10 +16,10 @@ def partition(column, radius=0):
         radius = 0
 
     for i in range(n_rows):
-        base = column[i]
+        base = column.iloc[i]
 
         for j in range(i, n_rows):
-            if abs(column[j] - base) > radius:
+            if abs(column.iloc[j] - base) > radius:
                 continue
             if i != j:
                 cluster[i].append(j)
@@ -122,7 +122,10 @@ def calc_red(data, core, core_pos_set, threshold=0, shuffle=True):
     red = list(core)
 
     # core_dependency = BaseRoughSet.calc_attr_dependency(len(core_pos_set), n_rows)
-    base = len(core_pos_set)
+    if len(red) == 0:
+        base = 0
+    else:
+        base = len(core_pos_set)
 
     if shuffle:
         random.shuffle(remained)
