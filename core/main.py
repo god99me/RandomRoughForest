@@ -43,6 +43,19 @@ def test_calc_accuracy(data, name, radius_range):
     print(data.iloc[:, :-1].describe(), "\n")
     print("group by classification target: ")
     print(data.groupby(data.shape[1] - 1).size(), "\n")
+
+    # box and whisker plots - plots each individual variable
+    cols = data.shape[1] - 1
+    rows = int(cols / 2) + 1 if cols % 2 else int(cols / 2)
+    data.iloc[:, :-1].plot(kind='box', subplots=True, layout=(2, rows), sharex=False, sharey=False)
+    plt.show()
+
+    data.iloc[:, :-1].hist()
+    plt.show()
+
+    scatter_matrix(data.iloc[:, :-1])
+    plt.show()
+
     # split-out validation dataset
     array = data.values
     X_train = array[:, :data.shape[1] - 1]
@@ -76,8 +89,16 @@ def test_calc_accuracy(data, name, radius_range):
         msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
         print(msg)
 
-    scores = RandomRoughForest.k_fold_evaluate(data, radius_range, 50)
-    print("%s: %f (%f) \n" % ("NRRF", np.mean(scores), np.std(scores)))
+        # Compare Algorithms
+    flg = plt.figure()
+    flg.suptitle('Algorithm Comparison')
+    ax = flg.add_subplot(111)
+    plt.boxplot(results)
+    ax.set_xticklabels(names)
+    plt.show()
+
+    # scores = RandomRoughForest.k_fold_evaluate(data, radius_range, 50)
+    # print("%s: %f (%f) \n" % ("NRRF", np.mean(scores), np.std(scores)))
 
 
 def test_calc_core(data, name, radius_range):
